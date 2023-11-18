@@ -1,0 +1,13 @@
+name: Trigger a presigned-url image creation job in target repo
+
+on:
+ push:
+    branches:
+      - develop
+    paths:
+      - PresignedUrl/**
+
+jobs:
+  call-workflow:
+    uses: aws-pipelines/.github/workflows/presigned-url-image.yaml@main
+    secrets: inherit
