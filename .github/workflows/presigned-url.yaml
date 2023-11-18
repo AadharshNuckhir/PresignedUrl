@@ -9,5 +9,5 @@ on:
 
 jobs:
   call-workflow:
-    uses: AadharshNuckhir/aws-pipelines/.github/workflows/presigned-url-image.yaml@master
+    uses: AadharshNuckhir/aws-pipelines/.github/workflows/presigned-url-image.yaml
     secrets: inherit
