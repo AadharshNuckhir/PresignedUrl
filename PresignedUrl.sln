@@ -3,14 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresignedUrl", "PresignedUrl\src\PresignedUrl\PresignedUrl.csproj", "{115239B2-0E68-4550-9EC9-4CA9C2BEB8B8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{0DB066AA-E83F-4DFE-ADF3-6E3E26F10B35}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{5DED06D4-695C-4C7A-8F27-010B36DF9AEA}"
-	ProjectSection(SolutionItems) = preProject
-		presigned-url.yaml = presigned-url.yaml
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresignedUrl", "PresignedUrl\PresignedUrl.csproj", "{115239B2-0E68-4550-9EC9-4CA9C2BEB8B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
