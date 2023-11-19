@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 
 #COPY ["PresignedUrl/PresignedUrl.csproj", "PresignedUrl/"]
-##COPY ["PresignedUrl.csproj", "."]
+COPY ["PresignedUrl.csproj", "."]
 RUN dotnet restore "./PresignedUrl.csproj"
 
 COPY . .

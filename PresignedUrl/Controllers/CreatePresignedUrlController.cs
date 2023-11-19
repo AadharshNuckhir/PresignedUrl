@@ -1,4 +1,5 @@
-﻿using Amazon.Lambda.Core;
+﻿using Amazon;
+using Amazon.Lambda.Core;
 using Amazon.S3;
 using Amazon.S3.Model;
 using Microsoft.AspNetCore.Http;
@@ -28,7 +29,7 @@ namespace PresignedUrl.Controllers
                 RegionEndpoint = Amazon.RegionEndpoint.EUCentral1,
                 UseHttp = true
             };
-
+            
             _s3Client = new AmazonS3Client(key_id, key_secret, config);
 #else
             _s3Client = new AmazonS3Client(RegionEndpoint.EUCentral1);
