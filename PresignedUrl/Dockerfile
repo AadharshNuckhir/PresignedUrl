@@ -5,10 +5,15 @@ WORKDIR /app
 # Use the official .NET SDK image as a parent image
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["PresignedUrl/PresignedUrl.csproj", "PresignedUrl/"]
-RUN dotnet restore "PresignedUrl/PresignedUrl.csproj"
+
+#COPY ["PresignedUrl/PresignedUrl.csproj", "PresignedUrl/"]
+##COPY ["PresignedUrl.csproj", "."]
+RUN dotnet restore "./PresignedUrl.csproj"
+
 COPY . .
-WORKDIR "/src/PresignedUrl"
+
+#WORKDIR "/src/PresignedUrl"
+WORKDIR "/src/."
 RUN dotnet build "PresignedUrl.csproj" -c Release -o /app/build
 
 FROM build AS publish
